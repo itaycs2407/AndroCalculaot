@@ -10,10 +10,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-
-
-    }
+}
 
     var testInput:String = ""
     fun updateValue(){
@@ -40,5 +37,24 @@ class MainActivity : AppCompatActivity() {
         updateValue()
     }
 
-
+    fun btn6(view: View){
+        testInput = testInput + "6";
+        updateValue()
+    }
+    fun btn7(view: View){
+        testInput = testInput + "7";
+        updateValue()
+    }
+    fun btn8(view: View){
+        testInput = testInput + "8";
+        updateValue()
+    }
+    fun btn9(view: View){
+        testInput = testInput + "9";
+        updateValue()
+    }
+    fun btn0(view: View){
+        testInput = testInput + "0";
+        updateValue()
+    }
 }
