@@ -31,9 +31,13 @@ class MainActivity : AppCompatActivity() {
             updateValue()
         }
     }
-    
+    fun res(view: View){
+
+
+    }
     fun updateValue(){
         resText.text = testInput
+        resultText.text = res.toString()
     }
     fun btn1(view: View){
         testInput = testInput + "1";
