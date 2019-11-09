@@ -13,6 +13,25 @@ class MainActivity : AppCompatActivity() {
 }
 
     var testInput:String = ""
+
+    var res = 0
+    fun btnPlus(view: View){
+        if (resText.text == "") {
+            return
+        }else
+        {
+            if (res == 0)
+            {
+            res = Integer.parseInt(testInput)
+            testInput = ""
+        }else{
+                res += Integer.parseInt(testInput)
+            }
+            testInput = ""
+            updateValue()
+        }
+    }
+    
     fun updateValue(){
         resText.text = testInput
     }
