@@ -22,19 +22,32 @@ class MainActivity : AppCompatActivity() {
         {
             if (res == 0)
             {
-            res = Integer.parseInt(testInput)
-            testInput = ""
-        }else{
+                res = Integer.parseInt(testInput)
+                testInput = ""
+            }else{
                 res += Integer.parseInt(testInput)
             }
             testInput = ""
             updateValue()
         }
     }
-    fun res(view: View){
-
-
+    fun btnMin(view: View){
+        if (resText.text == "") {
+            return
+        }else
+        {
+            if (res == 0)
+            {
+                res = Integer.parseInt(testInput)
+                testInput = ""
+            }else{
+                res -= Integer.parseInt(testInput)
+            }
+            testInput = ""
+            updateValue()
+        }
     }
+
     fun updateValue(){
         resText.text = testInput
         resultText.text = res.toString()
