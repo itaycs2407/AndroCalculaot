@@ -15,7 +15,8 @@ class MainActivity : AppCompatActivity() {
     var testInput:String = ""
 
     var res = 0
-    fun btnPlus(view: View){
+
+    fun doCalc (act:String){
         if (resText.text == "") {
             return
         }else
@@ -23,29 +24,26 @@ class MainActivity : AppCompatActivity() {
             if (res == 0)
             {
                 res = Integer.parseInt(testInput)
-                testInput = ""
             }else{
-                res += Integer.parseInt(testInput)
+                if (act == "Plus")
+                    res += Integer.parseInt(testInput)
+                else if(act == "Minus")
+                    res -= Integer.parseInt(testInput)
             }
             testInput = ""
             updateValue()
         }
     }
+
+
+    fun btnPlus(view: View){
+        doCalc("Plus")
+    }
     fun btnMin(view: View){
-        if (resText.text == "") {
-            return
-        }else
-        {
-            if (res == 0)
-            {
-                res = Integer.parseInt(testInput)
-                testInput = ""
-            }else{
-                res -= Integer.parseInt(testInput)
-            }
-            testInput = ""
-            updateValue()
-        }
+        doCalc("Minus")
+    }
+    fun btnRes(view: View){
+        updateValue()
     }
 
     fun updateValue(){
